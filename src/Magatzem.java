@@ -16,7 +16,7 @@ public class Magatzem {
         this.quantitatRacions -= numRacions;
     }
 
-    public int comprovarQuantitatRacions(int numRacions){
+    public int comprovarQuantitatRacions(){
         return this.quantitatRacions;
     }
 
