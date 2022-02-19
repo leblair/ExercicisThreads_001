@@ -1,8 +1,8 @@
 public class Magatzem {
     public int quantitatRacions = 1000;
 
-    public void retornarRacions(int numRacions){
-        if(Thread.currentThread().getId()== 1){
+    public synchronized void retornarRacions(int numRacions){
+        if(Thread.currentThread().getId()==Exercici_1.idThread){
             try {
                 Thread.sleep(5000);
             } catch (InterruptedException e) {
@@ -12,9 +12,9 @@ public class Magatzem {
         this.quantitatRacions += numRacions;
     }
 
-    public void agafaRacions(int numRacions){
-        this.quantitatRacions -= numRacions;
-    }
+    public synchronized void agafaRacions(int numRacions){
+        this.quantitatRacions += numRacions;
+    }//
 
     public int comprovarQuantitatRacions(){
         return this.quantitatRacions;
