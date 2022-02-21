@@ -15,8 +15,30 @@ public class CapDeDepartament implements  Runnable{
         this.magatzem = magatzem;
     }
 
+    public int getMovimentRacions() {
+        return movimentRacions;
+    }
+
+    public void setMovimentRacions(int movimentRacions) {
+        this.movimentRacions = movimentRacions;
+    }
+
     @Override
     public void run() {
 
+        String nomFil = Thread.currentThread().getName();
+
+        System.out.println("    " + nomFil + ".INICI");
+        System.out.println("    " + nomFil + ".movimentRacions = "  + movimentRacions);
+        System.out.println("    " + nomFil + ".magatzem.comprovarQuantitatRacions() = "  + magatzem.comprovarQuantitatRacions());
+        System.out.println("    " + nomFil + ".REALITZO L'OPERACIÓ");
+
+        if(getMovimentRacions()<0){
+            magatzem.agafaRacions(getMovimentRacions());
+        }else {
+            magatzem.retornarRacions(getMovimentRacions());
+        }
+        System.out.println("    " + nomFil + ".magatzem.comprovarQuantitatRacions() = "  + magatzem.comprovarQuantitatRacions());
+        System.out.println("    " + nomFil + ".FI");
     }
 }

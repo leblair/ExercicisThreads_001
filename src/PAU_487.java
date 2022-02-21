@@ -34,9 +34,9 @@ public class PAU_487 {
 
             menu.append("1. Threads implements Runnable");
             menu.append(System.getProperty("line.separator"));
-            menu.append("2. ");
+            menu.append("2. Threads extends Thread (I)");
             menu.append(System.getProperty("line.separator"));
-            menu.append("3. ");
+            menu.append("3. Threads extends Thread (II)");
             menu.append(System.getProperty("line.separator"));
             menu.append("4. ");
             menu.append(System.getProperty("line.separator"));
@@ -55,12 +55,12 @@ public class PAU_487 {
 
             switch (opcio) {
                 case "1":
-                    /*try {
+                    try {
                         Exercici_1.inicialitzarPrograma();
                     } catch (InterruptedException e) {
                         // TODO Auto-generated catch block
                         e.printStackTrace();
-                    }*/
+                    }
                     bloquejarPantalla();
                     break;
                 case "2":
