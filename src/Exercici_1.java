@@ -1,6 +1,6 @@
 public class Exercici_1 {
-    static float idThread;
 
+    static float idThread;
     public static void inicialitzarPrograma() throws InterruptedException {
         Magatzem magatzem = new Magatzem();
         CapDeDepartament comandament = new CapDeDepartament(magatzem,100);
@@ -8,7 +8,6 @@ public class Exercici_1 {
         CapDeDepartament timo_i_navegacio = new CapDeDepartament(magatzem,-30);
         CapDeDepartament enginyeria = new CapDeDepartament(magatzem,1000);
         CapDeDepartament ciencia = new CapDeDepartament(magatzem,-50);
-
 
         Thread thread1 = new Thread(comandament);
         idThread = thread1.getId();
@@ -32,3 +31,4 @@ public class Exercici_1 {
     }
 
 }
+

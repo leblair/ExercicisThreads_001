@@ -20,5 +20,4 @@ public class Magatzem {
         return this.quantitatRacions;
     }
 
-
 }
