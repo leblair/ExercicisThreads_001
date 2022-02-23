@@ -42,6 +42,7 @@ public class PAU_487 {
             menu.append(System.getProperty("line.separator"));
             menu.append("5. ");
             menu.append(System.getProperty("line.separator"));
+            menu.append("10. Llancar tots els torpedes");
             menu.append(System.getProperty("line.separator"));
 
             menu.append("50. Tornar al menú pare (PNS-24 Puma)");
@@ -75,8 +76,8 @@ public class PAU_487 {
 
                     bloquejarPantalla();
                     break;
-                case "5":
-
+                case "10":
+                    Exercici_2_v6.inicialitzarPrograma();
                     bloquejarPantalla();
                     break;
                 case "50":
